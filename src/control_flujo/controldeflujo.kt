@@ -9,11 +9,11 @@ fun ejercicio1(n1: Int, n2: Int) {
 
 fun ejercicio1_1(n1: Int, n2: Int) = println("La suma de $n1 + $n2 es ${n1 + n2}, \nel producto de $n1 * $n2 es ${n1 * n2}")
 
-fun ejercicio1_2(n1:Int, n2:Int){
+fun ejercicio1_2(){
     print("Ingrese el numero 1: ")
-    val n1: Int = readlnOrNull()?.toInt() ?: 0
+    val n1: Int = readlnOrNull()?.toIntOrNull() ?: 0
     print("Ingrese el numero 2: ")
-    val n2: Int = readlnOrNull()?.toInt() ?: 0
+    val n2: Int = readlnOrNull()?.toIntOrNull() ?: 0
     println("La suma de $n1 + $n2 es: ${n1 + n2} \nEl producto de $n1 * $n2 es: ${n1 * n2}")
 }
 
