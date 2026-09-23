@@ -1,0 +1,111 @@
+ --------------------------------------------------------------------------------
+                  Declaración de variables y operaciones
+ --------------------------------------------------------------------------------
+
+ 1. Realizar el almacenamiento de dos números enteros solicitado por teclado e imprimir su suma y su producto de los números tecleados
+
+ 2. Calcule el lado de un cuadrado, mostrar por pantalla el área del mismo (El perímetro de un cuadrado se calcula multiplicando el valor del lado por cuatro)
+
+ 3. Se debe desarrollar un programa que solicite el ingreso del precio de un artículo y la cantidad. Mostrar lo que debe abonar el comprador.
+
+ 4. Escribir un programa en el cual se ingresen cuatro números enteros, calcular y mostrar  la suma de los dos primeros y el producto del tercero y el cuarto.
+
+ 5. Realizar un programa que lea por teclado cuatro valores numéricos enteros e informar su suma y promedio. el programa llama a una función “promedio”, que devuelve el valor promedio promedio.
+ --------------------------------------------------------------------------------
+                 Estructura de control (IF - ELSE)
+ --------------------------------------------------------------------------------
+ 6. Ingresar el sueldo de una persona por teclado, si supera los 3000€ mostrar un mensaje en pantalla indicando que debe abonar impuestos.
+
+ 7. Realizar un programa que solicite ingresar dos números enteros distintos y muestre por pantalla el mayor de ellos.
+
+ 8. Ingresar 3 notas de un alumno, si el promedio es mayor o igual a siete mostrar un mensaje "Promocionado".
+
+ 9. Ingresa por teclado un número entero comprendido entre 1 - 99 ( ambos incluidos), mostrar un mensaje indicando si el número tiene uno o dos dígitos.
+ Permita al usuario repetir el mismo ejercicio si desea probar con otros valores
+
+ 10. Ingresar por teclado un valor entero. Si el valor ingresado es par almacenar el cuadro y si es impar calcular el cubo.
+
+ 11. Confeccionar un programa que solicite por teclado 3 notas de un alumno, calcule el promedio e imprima alguno de estos mensajes:
+ - Si el promedio es >=7 mostrar "Promocionado".
+ - Si el promedio es >=4 y <7 mostrar "Regular".
+ - Si el promedio es <4 mostrar "Reprobado".
+
+ 12. Un postulante a un empleo, realiza un test de capacitación, y se obtuvo la siguiente información:
+ a)Cantidad total de preguntas que se le realizaron
+ b) la cantidad de preguntas que contestó correctamente.
+ Se pide confeccionar un programa que ingrese los dos datos a) y b) por teclado e informe el nivel del mismo según el porcentaje de respuestas correctas que ha obtenido.
+
+ - Nivel Máximo    Porcentaje>=90%.
+ - Nivel Medio     Porcentaje>=75% y <90%.
+ - Nivel regular   Porcentaje>=50% y <75%.
+ - Fuera de nivel   Porcentaje<50%.
+
+ 13. Se almacena una fecha (día, mes y año) por teclado. Mostrar un mensaje si corresponde al
+ primer trimestre del año (enero, febrero o marzo) Almacenar por teclado el valor numérico del día, mes y año. Ejemplo: día:10 mes:2 año:2017.
+ --------------------------------------------------------------------------------
+                 Estructura de control (WHILE)
+ --------------------------------------------------------------------------------
+ 14.Escribir un programa que solicite almacenar un valor positivo y muestre la secuencia consecutiva desde 1 hasta el valor ingresado .
+ Ejemplo: Si ingresamos 30 se debe mostrar en pantalla los números del 1 al 30.
+
+ 15. Desarrollar un programa que permita almacenar 10 valores por teclado y  muestre la suma de los valores ingresados y su promedio.
+
+ 16. Una planta que fabrica piezas de hierro posee un lote de n piezas.
+ Confeccionar un programa que pida ingresar por teclado la cantidad de piezas a procesar y luego ingrese la longitud de cada pieza;
+ sabiendo que la pieza cuya longitud esté comprendida en el rango de 1.20 y 1.30 son aptas. Imprimir por pantalla la cantidad de piezas aptas que hay en el lote.
+
+ 17. Realizar un programa que permita ingresar el peso (en kilogramos) de piezas. El proceso
+ termina cuando ingresamos el valor 0.
+ Se debe informar:
+ a) Cuántas piezas tienen un peso entre 9.8 Kg. y 10.2 Kg.?, cuántas con más de 10.2 Kg.? y cuántas con menos de 9.8 Kg.?
+ b) La cantidad total de piezas procesadas.
+ --------------------------------------------------------------------------------
+                 Estructura de control (FOR)
+ --------------------------------------------------------------------------------
+ 18. Realizar un programa que imprima en pantalla los números del 1 al 100.
+
+ 19. Escribir un programa que lea 6 notas de un  alumno y realice un informe con:
+ –	nombre del alumno
+ –	las notas tecleadas
+ –	cuántas están aprobadas
+ –	cuantas reprobadas.
+ –	el promedio
+
+
+
+ 20. Desarrollar un programa que cuente cuantos múltiplos de 3, 5 y 9 hay en el rango solicitado al usuario
+
+ 21. Escribir un programa que lea n-números enteros y calcule la cantidad de valores pares
+ ingresados.
+
+
+ 22. Confeccionar un programa que lea n-pares de datos. Cada par tiene los datos de la base y la altura de un triángulo. El programa deberá informar:
+ a) De cada triángulo la medida de su base, su altura y su superficie (la superficie se calcula multiplicando la base por la altura y dividiendo por dos).\n" +
+ b) Diga cuantos triángulos tiene la superficie  mayor a 12
+
+ --------------------------------------------------------------------------------
+                 Estructura de control (WHEN)
+ --------------------------------------------------------------------------------
+
+ 23. Escribir un programa que pida ingresar la coordenada X,Y de un punto en el plano.
+ Posteriormente imprimir en pantalla en que cuadrante se ubica dicho punto.
+ (1o Cuadrante si x > 0 Y y > 0 , 2o Cuadrante: x < 0 Y y > 0, 3o Cuadrante: x < 0 Y y < 0, 4o Cuadrante: x > 0 Y y < 0)
+ Si alguno o los dos valores son cero, el punto se encuentra en un eje.
+
+ 24. Confeccionar un programa que pida por teclado tres notas de un alumno, calcule el promedio e imprima alguno de estos mensajes:
+ Si el promedio es >=7 mostrar "Promocionado".
+ Si el promedio es >=4 y <7 mostrar "Regular".
+ Si el promedio es <4 mostrar "Reprobado".
+
+ 25. Ingresar un valor entero comprendido entre 1 y 5. Mostrar el mismo en palabra (en castellano).
+
+ 26. Ingresar un valor entero positivo comprendido entre 1 y 10000. Imprimir un mensaje indicando cuantos dígitos tiene.
+
+ 27. Ingresar por teclado un valor entero, mostrar una leyenda por pantalla que indique si el número es positivo, nulo o negativo.
+
+ 28. Realizar un programa que lea los lados de un triángulos, e informar:
+ a) De cada uno de ellos, qué tipo de triángulo es: equilátero (tres lados iguales),isósceles (dos lados iguales), o escaleno (ningún lado igual)
+ b) Cantidad de tríangulos de cada tipo.
+
+
+
