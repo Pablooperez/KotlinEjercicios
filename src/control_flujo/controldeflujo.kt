@@ -29,5 +29,59 @@ fun ejercicio2_1(lado: Float) = println("El área del cuadrado es ${lado * 4}")
 fun ejercicio3(precio: Float, cantidad: Int) {
     /*  3. Se debe desarrollar un programa que solicite el ingreso del precio de un artículo y
         la cantidad. Mostrar lo que debe abonar el comprador. */
+    val precio = (readlnOrNull()?.toFloatOrNull() ?: 0.0f).coerceAtLeast(0F)
+    val cantidad = (readlnOrNull()?.toIntOrNull() ?: 0).coerceAtLeast(0)
+
     println("Debe abonar ${precio * cantidad}")
 }
+
+fun ejercicio4(){
+    print("Ingrese el numero 1: ")
+    val n1: Int = readlnOrNull()?.toIntOrNull() ?: 0
+    print("Ingrese el numero 2: ")
+    val n2: Int = readlnOrNull()?.toIntOrNull() ?: 0
+    print("Ingrese el numero 3: ")
+    val n3: Int = readlnOrNull()?.toIntOrNull() ?: 0
+    print("Ingrese el numero 4: ")
+    val n4: Int = readlnOrNull()?.toIntOrNull() ?: 0
+    println("La suma de $n1 + $n2 es: ${n1 + n2} \nEl producto de $n3 * $n4 es: ${n3 * n4}")
+}
+
+fun ejercicio5(){
+    val numeros: MutableList<Int> = mutableListOf()
+    for (x in 1..4){
+        print("Ingrese el numero $x:")
+        var entrada = (readlnOrNull()?.toIntOrNull() ?: 0).coerceIn(0,10)
+        numeros.add(entrada)
+    }
+    println("La suma es: ${numeros.sum()} \nEl promedio es: ${numeros.average()}")
+}
+
+fun ejercicio5_1(){
+    print("Ingrese el numero 1: ")
+    val n1: Int = readlnOrNull()?.toIntOrNull() ?: 0
+    print("Ingrese el numero 2: ")
+    val n2: Int = readlnOrNull()?.toIntOrNull() ?: 0
+    print("Ingrese el numero 3: ")
+    val n3: Int = readlnOrNull()?.toIntOrNull() ?: 0
+    print("Ingrese el numero 4: ")
+    val n4: Int = readlnOrNull()?.toIntOrNull() ?: 0
+    val suma: Int = n1 + n2 + n3 + n4
+    val promedio: Float = suma.toFloat() / 4
+    println("La suma de $n1 + $n2 + $n3 + $n4 es: $suma \nEl promedio de $n1 , $n2 , $n3 , $n4 , es: $promedio ")
+}
+
+fun ejercicio9(){
+    var condicion: Boolean = true
+    while (condicion) {
+        print("Ingresa un número entre 1 - 99 (inclusives): ")
+        val numero: Int = (readlnOrNull()?.toIntOrNull() ?: 0).coerceIn(1, 99)
+        when (numero) {
+            in 1..9 -> "Tiene 1 digito"
+            in 10..99 -> "Tiene 2 digitos"
+        }
+        print("¿Quieres seguir?")
+
+    }
+}
+// Ejercicio 9
