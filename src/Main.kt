@@ -8,6 +8,9 @@ fun main() {
     //ejercicio2_1(6F)
     //ejercicio5()
     //ejercicio5_1()
-    ejercicio9()
+    //ejercicio9()
+    //ejercicio7()
+    //ejercicio8()
+    ejercicio11()
 }
 

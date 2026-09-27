@@ -71,17 +71,89 @@ fun ejercicio5_1(){
     println("La suma de $n1 + $n2 + $n3 + $n4 es: $suma \nEl promedio de $n1 , $n2 , $n3 , $n4 , es: $promedio ")
 }
 
+fun ejercicio6() {
+    println("Ingrese el sueldo: ")
+    if ((readlnOrNull()?.toIntOrNull() ?: 0) > 3000) println("Debe abonar impuestos")
+}
+
+fun ejercicio7() {
+    // ealizar un programa que solicite ingresar dos números enteros distintos y muestre por pantalla el mayor de ellos.
+    println("Ingrese un número entero: ")
+    val n1 : Int = readlnOrNull()?.toIntOrNull()?:0
+    println("Ingrese otro número entero: ")
+    if (n1 > (readlnOrNull()?.toIntOrNull() ?: 0)) println("El primer número es mayor") else print("El segundo número es mayor")
+}
+
+fun ejercicio8() {
+    // Ingresar 3 notas de un alumno, si el promedio es mayor o igual a siete mostrar un mensaje "Promocionado".
+    val notas: MutableList<Int> = mutableListOf()
+    for (x in 1..3){
+        print("Introduce nota $x:")
+        notas.add(readlnOrNull()?.toIntOrNull() ?: 0)
+    }
+    if (notas.isNotEmpty() && notas.average()>7){
+        println("Promocionado")
+    }
+}
+
 fun ejercicio9(){
     var condicion: Boolean = true
     while (condicion) {
         print("Ingresa un número entre 1 - 99 (inclusives): ")
         val numero: Int = (readlnOrNull()?.toIntOrNull() ?: 0).coerceIn(1, 99)
         when (numero) {
-            in 1..9 -> "Tiene 1 digito"
-            in 10..99 -> "Tiene 2 digitos"
+            in 1..9 -> println("Tiene 1 digito")
+            in 10..99 -> println("Tiene 2 digitos")
         }
         print("¿Quieres seguir?")
+        var respuesta : String = (readlnOrNull()?.trim() ?: "").lowercase()
+        if (respuesta == "si") {
+            condicion = true
+        } else {
+                condicion = false
+            }
+        }
 
     }
+
+fun ejercicio10() {
+    val numero: Int = readlnOrNull()?.toIntOrNull() ?: 0
+    if (numero % 2 == 0) {
+        val numero_cuadrado: Int = numero * numero
+    } else {
+        val numero_cubo: Int = numero * numero * numero
+    }
 }
-// Ejercicio 9
+
+fun ejercicio11() {
+    val notas: MutableList<Int> = mutableListOf()
+    for (x in 1..3) {
+        print("Ingrese la nota $x: ")
+        notas.add(readlnOrNull()?.toIntOrNull() ?: 0)
+    }
+    println("El promedio es: ${notas.average()}")
+    if (notas.average() >= 7) {
+        print("Promocionado")
+    } else if (notas.average() < 4) {
+        print("Reprobado")
+    } else {
+        print("Regular")
+    }
+}
+
+fun ejercicio12() {
+    println("¿Cuántas preguntas se te realizaron? ")
+    val num_preguntas : Int = readlnOrNull()?.toIntOrNull() ?: 0
+    println("¿Cuántas respondiste bien? ")
+    val num_bien : Int = readlnOrNull()?.toIntOrNull() ?: 0
+    val porcentaje : Float = (num_preguntas / num_bien).toFloat()
+    when {
+        porcentaje >= 0.90 -> print("Nivel Máximo")
+        porcentaje in 0.75..0.89 -> print("Nivel Medio")
+        porcentaje in 0.50..0.74 -> print("Nivel Regular")
+        porcentaje < 50 -> print("Fuera de nivel")
+    }
+
+
+}
+
