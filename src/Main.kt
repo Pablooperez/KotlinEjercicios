@@ -11,6 +11,9 @@ fun main() {
     //ejercicio9()
     //ejercicio7()
     //ejercicio8()
-    ejercicio11()
+    //ejercicio11()
+    //ejercicio13()
+    //ejercicio14()
+    //ejercicio15()
 }
 

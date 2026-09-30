@@ -1,5 +1,7 @@
 package control_flujo
 
+// Declaración de variables
+
 fun ejercicio1(n1: Int, n2: Int) {
     /*  1. Realizar el almacenamiento de dos números enteros solicitado por teclado e
            imprimir su suma y su producto de los números tecleados. */
@@ -71,6 +73,8 @@ fun ejercicio5_1(){
     println("La suma de $n1 + $n2 + $n3 + $n4 es: $suma \nEl promedio de $n1 , $n2 , $n3 , $n4 , es: $promedio ")
 }
 
+// Estructuras de control (If-Else)
+
 fun ejercicio6() {
     println("Ingrese el sueldo: ")
     if ((readlnOrNull()?.toIntOrNull() ?: 0) > 3000) println("Debe abonar impuestos")
@@ -113,7 +117,6 @@ fun ejercicio9(){
                 condicion = false
             }
         }
-
     }
 
 fun ejercicio10() {
@@ -153,7 +156,65 @@ fun ejercicio12() {
         porcentaje in 0.50..0.74 -> print("Nivel Regular")
         porcentaje < 50 -> print("Fuera de nivel")
     }
-
-
 }
+
+fun ejercicio13() {
+    print("Día: ")
+    var dia : Int = (readlnOrNull()?.toIntOrNull()?:1).coerceIn(1,31)
+    print("Mes: ")
+    var mes : Int = (readlnOrNull()?.toIntOrNull()?:1).coerceIn(1,12)
+    print("Año: ")
+    var año : Int = (readlnOrNull()?.toIntOrNull()?:1).coerceIn(1,2027)
+    println("Día: $dia Mes: $mes Año: $año")
+    if (mes in 1..3){
+        println("Pertenece al primer trimestre del año.")
+    }else{
+        println("No pertenece al primer trimestre del año")
+    }
+}
+
+// Estructuras de control (While)
+
+fun ejercicio14() {
+    print("Dime un valor positivo: ")
+    var num: Int = (readlnOrNull()?.toIntOrNull()?:0).coerceAtLeast(1)
+    var condicion: Boolean = true
+    while (condicion == true){
+        for (x in 1..num) {
+            if (x < num){
+                print("$x - ")
+            }else{
+                print("$x")
+            }
+        }
+        condicion = false
+    }
+}
+
+fun ejercicio15() {
+    var lista: MutableList<Float> = mutableListOf()
+    println("Dime 10 valores --> ")
+    for (x in 1..10){
+        print("Valor $x: ")
+        var valor = readlnOrNull()?.toFloatOrNull()?: 0f
+        lista.add(valor)
+    }
+    print("La suma es: ${lista.sum()} \n")
+    print("El promedio es: ${lista.average()}")
+}
+
+fun triangulos() {
+    val triangulo: MutableList<Float> = mutableListOf()
+    for (x in 1..3){
+        print("Dime la longitud del lado $x: ")
+        var lado = readlnOrNull()?.toFloatOrNull()?:0f
+        triangulo.add(lado)
+    }
+    when {
+        (triangulo[0]==triangulo[1])&&(triangulo[0]==triangulo[2])&&(triangulo[1]==triangulo[2]){
+
+        }
+    }
+}
+
 
