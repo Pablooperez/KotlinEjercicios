@@ -203,7 +203,7 @@ fun ejercicio15() {
     print("El promedio es: ${lista.average()}")
 }
 
-fun triangulos() {
+val triangulos =  {
     val triangulo: MutableList<Float> = mutableListOf()
     var equilatero: Int = 0
     var isosceles: Int = 0
@@ -213,20 +213,37 @@ fun triangulos() {
         var lado = readlnOrNull()?.toFloatOrNull()?:0f
         triangulo.add(lado)
     }
-    when {
+    print(when {
         triangulo[0]==triangulo[1]&&triangulo[1]==triangulo[2] -> {
-            println("Es un triangulo Equilatero")
             equilatero+= 1
+            "Es un triangulo Equilatero"
         }
         triangulo[0]==triangulo[1]||triangulo[0]==triangulo[2] || triangulo[1]==triangulo[2] -> {
-            println("Es un triangulo Isósceles")
             isosceles += 1
+            "Es un triangulo Isósceles"
         }
         else -> {
-            println("Es un triángulo escaleno")
             escaleno += 1
+            "Es un triángulo escaleno"
         }
-    }
+    })
 }
+
+fun ejercicio16(){
+// Una planta que fabrica piezas de hierro posee un lote de n piezas.
+// Confeccionar un programa que pida ingresar por teclado la cantidad de piezas a procesar y luego ingrese la longitud de cada pieza;
+// sabiendo que la pieza cuya longitud esté comprendida en el rango de 1.20 y 1.30 son aptas. Imprimir por pantalla la cantidad de
+// piezas aptas que hay en el lote.
+    val longitudes: MutableList<Float> = mutableListOf()
+    print("Número de piezas: ")
+    var numero_piezas: Int = readlnOrNull()?.toIntOrNull()?: 0
+    for (x in 1..numero_piezas) {
+        print("Longitud pieza $x: ")
+        var longitud = (readlnOrNull()?.toFloatOrNull() ?: 0f)
+        if (longitud in (1.20f..1.30f)) longitudes.add(longitud)
+    }
+    print("Numero de piezas aptas: ${longitudes.size}")
+}
+
 
 

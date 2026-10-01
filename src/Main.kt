@@ -1,6 +1,7 @@
 import control_flujo.*
 
 fun main() {
+    triangulos
     //ejercicio1(6, 5)
     //ejercicio1_1(6, 6)
     //ejercicio1_2()
@@ -15,6 +16,8 @@ fun main() {
     //ejercicio13()
     //ejercicio14()
     //ejercicio15()
-    triangulos()
+    triangulos
+    ejercicio16()
+
 }
 
