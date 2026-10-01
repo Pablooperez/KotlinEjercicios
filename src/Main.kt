@@ -15,5 +15,6 @@ fun main() {
     //ejercicio13()
     //ejercicio14()
     //ejercicio15()
+    triangulos()
 }
 

@@ -205,14 +205,26 @@ fun ejercicio15() {
 
 fun triangulos() {
     val triangulo: MutableList<Float> = mutableListOf()
+    var equilatero: Int = 0
+    var isosceles: Int = 0
+    var escaleno: Int = 0
     for (x in 1..3){
         print("Dime la longitud del lado $x: ")
         var lado = readlnOrNull()?.toFloatOrNull()?:0f
         triangulo.add(lado)
     }
     when {
-        (triangulo[0]==triangulo[1])&&(triangulo[0]==triangulo[2])&&(triangulo[1]==triangulo[2]){
-
+        triangulo[0]==triangulo[1]&&triangulo[1]==triangulo[2] -> {
+            println("Es un triangulo Equilatero")
+            equilatero+= 1
+        }
+        triangulo[0]==triangulo[1]||triangulo[0]==triangulo[2] || triangulo[1]==triangulo[2] -> {
+            println("Es un triangulo Isósceles")
+            isosceles += 1
+        }
+        else -> {
+            println("Es un triángulo escaleno")
+            escaleno += 1
         }
     }
 }
