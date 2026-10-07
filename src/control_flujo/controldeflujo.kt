@@ -245,5 +245,22 @@ fun ejercicio16(){
     print("Numero de piezas aptas: ${longitudes.size}")
 }
 
+fun ejercicio17(){
+    // Realizar un programa que permita ingresar el peso (en kilogramos) de piezas. El proceso
+    // termina cuando ingresamos el valor 0.
+    // Se debe informar:
+    // a) Cuántas piezas tienen un peso entre 9.8 Kg. y 10.2 Kg.?, cuántas con más de 10.2 Kg.? y cuántas con menos de 9.8 Kg.?
+    // b) La cantidad total de piezas procesadas.
+    val pesos: MutableList<Int> = mutableListOf()
+    while (true) {
+        print("Ingresa el peso (Kg): ")
+        var peso: Int = readlnOrNull()?.toIntOrNull()?:0
+        if (peso==0){
+            false
+        }else{
+            pesos.add(peso)
+        }
+    }
+}
 
 

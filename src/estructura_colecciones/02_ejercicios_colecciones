@@ -3,17 +3,14 @@
 --------------------------------------------------------------------------------
 
 1. Se desea guardar los sueldos de 5 operarios.
-a) Imprimir el primer valor  usando la función get
-b) Imprimir el primer valor usando el indice
-c) Recorrer  por los indices, e imprimir el valor
-d) Recorrer el array e imprimir cada posición y el valor almacenado
+a) Imprimir el primer valor
+b) Imprimir el listado de los salarios
 
 2. Definir una lista  de 5 componentes de tipo Float que representen las alturas de 5 personas.
 a) Obtener la altura media
 b) Contar cuántas personas son más altas que el promedio y cuántas más bajas.
-c) Hacer una copia de las personas más alta o baja que la media
 
-3. Cargar una lista de 10 elementos de tipo entero y verificar si esta ordenado de menor a mayor
+3. Hacer una lista de 10 elementos de tipo entero y verificar si esta ordenado de menor a mayor
 a) Si no esta ordenado, preguntar al usuario si desea ordenar e imprima el arreglo ordenado
 
 4. Leer una lista de 5 elementos de tipo entero. Imprimir luego el primer y último elemento.
