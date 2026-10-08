@@ -1,9 +1,13 @@
 import control_flujo.*
+import estructura_colecciones.ejercicio10_colecciones
 import estructura_colecciones.ejercicio1_colecciones
 import estructura_colecciones.ejercicio2_colecciones
 import estructura_colecciones.ejercicio3_colecciones
 import estructura_colecciones.ejercicio4_colecciones
 import estructura_colecciones.ejercicio5_colecciones
+import estructura_colecciones.ejercicio6_colecciones
+import estructura_colecciones.ejercicio7_colecciones
+import estructura_colecciones.ejercicio9_colecciones
 
 fun main() {
     //triangulos
@@ -26,6 +30,9 @@ fun main() {
     //ejercicio2_colecciones()
     //ejercicio3_colecciones()
     //ejercicio4_colecciones()
-    ejercicio5_colecciones()
+    //ejercicio5_colecciones()
+    //ejercicio6_colecciones()
+    //ejercicio9_colecciones()
+    ejercicio10_colecciones()
 }
 

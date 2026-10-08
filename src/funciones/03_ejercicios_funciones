@@ -1,0 +1,81 @@
+/*
+********************************************************************************
+**
+ Programming Kotlin. Unidad 3 - Funciones
+
+********************************************************************************
+**
+--------------------------------------------------------------------------------
+ Funciones : con una única expresión
+--------------------------------------------------------------------------------
+1. Realice un programa cuya fu
+nción principal solicite el nombre al usuario y si
+es valida la entrada de datos
+a) llame a una función "muestraMiNombre" que muestre su nombre
+b) llame a una función saludaKotlin que muestre el mensaje "Kotlin te da la
+bienvenida <el nombre del usuario>
+2.Desarrollar un programa que permita ingresar el lado de un cuadrado. Luego
+preguntar si quiere calcular y mostrar su perímetro o su superficie.
+3. Usemos rangos de números enteros para jugar el juego Fizz-Buzz.
+Los jugadores se turnan para contar incrementalmente, reemplazando cualquier
+número divisible por tres con la palabra Fizz y cualquier
+número divisible por cinco con la palabra Buzz. Si un número es múltiplo de
+ambos tres y cinco, dices "FizzBuzz".
+Imprime las respuestas correctas para los números del 1 al 100.
+Nota: cómo verifica las posibles condiciones con una expresión when sin un
+argumento.
+4. Calcule el factorial de un numero introducido por teclado
+5. Dado un numero introducido por teclado, verifique si es un numero Perfecto
+(La suma de todos sus divisores en el numero)
+6.Confeccionar una función que le enviemos como parámetro un String y nos
+retorne la cantidad de caracteres que tiene.
+En la función principal solicitar dos nombres por teclado e imprimir cual de las
+dos palabras tiene más caracteres.
+7. Elaborar un programa, cuya función principal solicite 2 números A y B por
+teclado. Realice una función para cada una de estas operaciones:
+a) sumar ambos números
+b) Saber que numero es mayor
+c) saber si el numero A esta en el rango de 0 al numero B
+--------------------------------------------------------------------------------
+ Funciones: con parámetros con valor por defecto
+--------------------------------------------------------------------------------
+8. Realice una función, que solicite dos números num1 y num2, llame a la función
+dividir que realiza la división de ambos números en caso que sea posible la
+división,
+en cualquier otro caso se asume el valor 2 al num2.
+9. Confeccionar una función que reciba un String como parámetro y en forma
+opcional un segundo String con un carácter.
+La función debe mostrar el String subrayado con el carácter que indica el
+segundo parámetro
+--------------------------------------------------------------------------------
+ Funciones: llamada a la función con argumentos nombrados
+--------------------------------------------------------------------------------
+10. Confeccionar una función que reciba el nombre de un empleado, el pago por
+hora y la cantidad de horas trabajadas. Llame a una función calcularSueldo
+Debe mostrar su sueldo y el nombre. Hacer la llamada de la función mediante
+argumentos nombrados.
+11. Realice una función mediante argumentos nombrados, que muestre el nombre, la
+edad y fecha de nacimiento de la persona. Esta función es llamada desde la
+función principal
+--------------------------------------------------------------------------------
+ Funciones: internas y locales
+--------------------------------------------------------------------------------
+12. Confeccionar una función que llame a la función multiplode2y5 , donde
+permita ingresar un valor por teclado y saber si es múltiplos de 2 y de 5.
+Esta función llama a la función interna múltiplo que devuelve el resultado de la
+división de 2 números
+--------------------------------------------------------------------------------
+ Funciones: parámetros y retorno de datos tipo arreglo
+--------------------------------------------------------------------------------
+13. Definir en la función principal un arreglo de enteros de 5 elementos.
+Declarar dos funciones, en una efectuar el almacenamiento de sus elementos y en
+la otra su impresión.
+14. Se desea almacenar los sueldos de operarios. Cuando se ejecuta el programa
+se debe pedir la cantidad de sueldos a ingresar. Luego crear un arreglo con
+dicho tamaño.
+Definir una función de almacenar y otra de impresión.
+--------------------------------------------------------------------------------
+ Funciones: simplificada
+--------------------------------------------------------------------------------
+15. A través de una función simplificada, realice la comparación de 2 números
+pasado por parámetros y devuelva si es Par o No

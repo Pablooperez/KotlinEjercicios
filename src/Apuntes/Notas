@@ -1,0 +1,63 @@
+APUNTES
+--------------------------------------------------------------------------------
+FUNCIONES:
+--------------------------------------------------------------------------------
+1. Función clásica:
+
+    fun suma(a:Int,b:Int): Int {
+        return a + b
+    }
+
+2. Función de expresión única:
+
+    fun suma(a:Int,b:Int): Int = a + b
+
+3. Función anónima: una función sin nombre asignado a un objeto.
+
+    val suma = fun(a: Int, b:Int): Int {
+        return a + b
+    }
+
+4. Lambda Básica: Sobretodo usado en estructuras
+
+    val suma: (Int, Int) -> Int = {a , b -> a + b}
+--------------------------------------------------------------------------------
+PARÁMETROS DE ENTRADA:
+--------------------------------------------------------------------------------
+1. Obligatorios.
+
+2. Por defecto:
+
+    fun crearUsuario(
+        nombre:String,
+        edad:Int = 18,
+        activo:Boolean = True,
+        rol:String = "usuario"
+    ) : String {
+        return ..............}
+3. vararg:
+
+    fun sumarTodos(vararg numeros: Int): Int{
+        return numeros.sum()
+    }
+--------------------------------------------------------------------------------
+PARÁMETROS DE SALIDA:
+--------------------------------------------------------------------------------
+1. Retorno explícito:
+
+    fun nombre(): Tipo
+
+2. Unit (Vacío):
+
+    fun nombre() : Unit
+
+3. Anulable:
+    fun nombre() : Tipo?
+
+4. Inferido:
+
+    fun nombre() = expresión
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
