@@ -84,9 +84,82 @@ fun ejercicio5_colecciones(){
     print("Introduce la cantidad de sueldos a ingresar: ")
     val cantidad = (readlnOrNull()?.toIntOrNull()?:1).coerceAtLeast(1)
     val lista = MutableList(cantidad){
-            print("Introduce el sueldo $it: ")
+            print("Introduce el sueldo ${it+1}: ")
             (readlnOrNull()?.toFloatOrNull()?:0f)
     }
     print(lista)
+}
+
+fun ejercicio6_colecciones(){
+    // 6. Desarrollar un programa que permita ingresar una lista de N-elementos, ingresar los elementos por teclado.
+    //a) Elaborar una función, donde inicialice cada posición de la lista y devuelva la posición de la suma de todos sus elementos
+
+    print("Tamaño de la lista: ")
+    val cantidad = readlnOrNull()?.toIntOrNull()?:1
+    val lista = MutableList(cantidad){
+        print("Elemento ${it+1} : ")
+        (readlnOrNull()?.toFloatOrNull()?:0f)
+    }
+    print(lista.sum())
+}
+
+fun ejercicio7_colecciones(){
+    // 7. Declare una lista inmutable llamada "listaDiasSemana", donde almacena los días de la semana en abreviatura
+    //a) imprima la lista
+    //b) imprima la posición del día "Martes" dentro de la lista
+    //c) imprima el valor la primera posición de la lista
+    //d) imprima el valor la última posición de la lista
+    //e) devuelva el valor de la primera posición
+    //f) devuelva el tamaño de la lista
+    //g) devuelva la posición donde se encuentre el valor "Lun"
+    //h) verificar si el valor "jue" esta dentro de la lista
+    //i) declare una lista llamada listaFinde, donde sus valores sean "Vie", "Sab" y "Dom"
+    //j) imprima la listaFinde
+    //k) declare una "ListaCopia1" a partir de listaDiasSemana donde almacene solamente los valores que tengan mas de 4 letras
+    //l) declare una "ListaCopia1" a partir de listaDiasSemana donde almacene solamente los valores que tengan o contenga la letra "M"
+    //m) imprima las listas "ListaCopia1" y "listaCopia2"
+
+    val lista_semana = listOf("Lunes","Martes","Mie","Jue","Vie","Sab","Dom")
+    println(lista_semana)
+    println(lista_semana.indexOf("Martes"))
+    println(lista_semana.first())
+    println(lista_semana.last())
+    println(lista_semana.size)
+    println(lista_semana.indexOf("L"))
+    println(lista_semana.contains("J"))
+    val lista_finde = listOf("Vie","Sab","Dom")
+    println(lista_finde)
+    val listaCopia1 = lista_semana.filter {it.length > 4}
+    val listaCopia2 = lista_semana.filter { it.contains("M") }
+    println(listaCopia1)
+    println(listaCopia2)
+}
+
+fun ejercicio8_colecciones(){
+    //8. Crear una lista mutable con las edades de varias personas. Las edades se introducen por teclado, y solicite cuanta edades va a introducir o almacenar.
+    //a) Diga el promedio de edades
+    //b) Cantidad de personas mayores de edad (18 años)
+    //c) Ingrese una edad al principio y al final de la lista  e imprima la nueva lista
+    //d) elimine la primera edad y la ultima de la lista  e imprima la nueva lista
+    //e) elimine de la lista las edades igual a 16 e imprima la lista
+    //f) elimine toda la lista e imprima
+    print("Introduce la cantidad de datos: ")
+    val cantidad = readlnOrNull()?.toIntOrNull()?:1
+    val lista_mutable = MutableList(cantidad){
+        print("Elemento ${it+1}: ")
+        readlnOrNull()?.toIntOrNull()?:0
+    }
+    print("Promedio: ${lista_mutable.average()}")
+    print("Cantidad de personas mayores de edad: ${lista_mutable.filter { it > 18 }.sum()}")
+    lista_mutable.addFirst(50)
+    lista_mutable.addLast(34)
+    print(lista_mutable)
+    lista_mutable.drop(0)
+    lista_mutable.drop(-1)
+    lista_mutable.dropWhile { it == 16 }
+
+
+
+
 
 }
