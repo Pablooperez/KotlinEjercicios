@@ -144,19 +144,21 @@ fun ejercicio8_colecciones(){
     //e) elimine de la lista las edades igual a 16 e imprima la lista
     //f) elimine toda la lista e imprima
     print("Introduce la cantidad de datos: ")
-    val cantidad = readlnOrNull()?.toIntOrNull()?:1
+    val cantidad = (readlnOrNull()?.toIntOrNull()?:1).coerceIn(1,100)
     val lista_mutable = MutableList(cantidad){
         print("Elemento ${it+1}: ")
-        readlnOrNull()?.toIntOrNull()?:0
+        (readlnOrNull()?.toIntOrNull()?:0).coerceIn(1,130)
     }
     print("Promedio: ${lista_mutable.average()}")
-    print("Cantidad de personas mayores de edad: ${lista_mutable.filter { it > 18 }.sum()}")
+    print("Cantidad de personas mayores de edad: ${lista_mutable.filter { it >= 18 }.count()}")
     lista_mutable.addFirst(50)
     lista_mutable.addLast(34)
     print(lista_mutable)
-    lista_mutable.drop(0)
-    lista_mutable.drop(-1)
+    lista_mutable.removeFirst()
+    lista_mutable.removeLast()
+    print(lista_mutable)
     lista_mutable.dropWhile { it == 16 }
+    lista_mutable.clear()
 
 }
 
@@ -213,10 +215,10 @@ fun ejercicio12_colecciones(){
     cantidadmayor20(mapa)
 }
 
-    fun imprimir(mapa: Map<String, Int>) = mapa
+fun imprimir(mapa: Map<String, Int>) = mapa
 
 
-    fun cantidadmayor20(mapa: Map<String, Int>) =
+fun cantidadmayor20(mapa: Map<String, Int>) =
         mapa.count { it.value > 20 }
 fun ejercicio13_colecciones(){
     //13 Desarrollar una aplicación que nos permita crear un diccionario ingles/castellano. La clave es la palabra en ingles y el valor es la palabra en castellano.

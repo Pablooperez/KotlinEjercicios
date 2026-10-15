@@ -31,3 +31,13 @@ fun ejercicio2_funciones(){
 fun calcularperimetro(lado: Float) = println("El perímetro es: ${lado*4}")
 fun calcularsuperficie(lado: Float) = println("La superficie es ${lado*lado}")
 
+fun ejercicio3_funciones(){
+    //3. Usemos rangos de números enteros para jugar el juego Fizz-Buzz.
+    //Los jugadores se turnan para contar incrementalmente, reemplazando cualquier
+    //número divisible por tres con la palabra Fizz y cualquier
+    //número divisible por cinco con la palabra Buzz. Si un número es múltiplo de
+    //ambos tres y cinco, dices "FizzBuzz".
+    //Imprime las respuestas correctas para los números del 1 al 100.
+    //Nota: cómo verifica las posibles condiciones con una expresión when sin un
+    //argumento.
+}
