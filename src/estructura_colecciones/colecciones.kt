@@ -209,6 +209,8 @@ fun ejercicio12_colecciones(){
         "Tomate" to 13,
         "Car" to 1000
         )
+    imprimir(mapa)
+    cantidadmayor20(mapa)
 }
 
     fun imprimir(mapa: Map<String, Int>) = mapa
@@ -216,5 +218,133 @@ fun ejercicio12_colecciones(){
 
     fun cantidadmayor20(mapa: Map<String, Int>) =
         mapa.count { it.value > 20 }
+fun ejercicio13_colecciones(){
+    //13 Desarrollar una aplicación que nos permita crear un diccionario ingles/castellano. La clave es la palabra en ingles y el valor es la palabra en castellano.
+    //Crear las siguientes funciones:
+    //a) Cargar el diccionario (se ingresan por teclado la palabra en ingles y su traducción en castellano)
+    //b) Listado completo del diccionario.
+    //c) Ingresar por teclado una palabra en ingles y si existe en el diccionario mostrar su traducción.
 
+    val diccionario = mutableMapOf<String,String>()
+
+    cargardiccionario(diccionario)
+    imprimirdiccionario(diccionario)
+    palabra(diccionario)
+
+}
+fun cargardiccionario(diccionario: MutableMap<String, String>){
+    print("¿Cuantas palabras quieres introducir?: ")
+    val respuesta = readlnOrNull()?.toIntOrNull()?:1
+    for (x in 1..respuesta){
+        print("Introduce la palabra en Ingles: ")
+        val clave = readlnOrNull().toString()?:"-"
+        print("Introduce la palabra en Castellano: ")
+        val valor = (readlnOrNull().toString()?:"-")
+        diccionario[clave]=valor
+    }
+}
+
+fun imprimirdiccionario(diccionario:Map<String, String>) = diccionario
+
+fun palabra(diccionario:Map<String, String>) {
+    print("Introduce la palabra para buscarla: ")
+    val palabra = readlnOrNull().toString()?:"-"
+    if (palabra in diccionario) {
+        print("La traducción de $palabra es : ${diccionario[palabra]}")
+    }else{
+        print("No existe $palabra en el diccioanario")
+    }
+}
+
+fun ejercicio14_colecciones(){
+    //14. Confeccionar un programa que permita cargar un código de producto como clave en un Map.
+    //Guardar para cada clave un objeto de la clase Producto que defina como propiedades su nombre del producto, su precio y cantidad en stock.
+    //Implementar las siguientes funciones:
+    //a) Almacenar datos en el Map.
+    //2) Listado completo de productos.
+    //3) Consulta de un producto por su clave, mostrar el nombre, precio y stock.
+    //4) Cantidad de productos que tengan un stock con valor cero.
+
+    val inventario = mutableMapOf<Int, Producto>()
+    almacenarDatos(inventario)
+    imprimirinventario(inventario)
+    consultar(inventario)
+    stock0(inventario)
+
+
+}
+data class Producto(
+    val nombre :  String,
+    val precio : Float,
+    val stock: Int
+)
+
+fun almacenarDatos(inventario: MutableMap<Int, Producto>){
+    print("¿Cuantos productos quieres almacenar?:")
+    val cantidad = readlnOrNull()?.toIntOrNull()?:1
+    for (x in 1..cantidad){
+        print("PRODUCTO NÚMERO $x \n")
+        print("Introduce el codigo del producto: \n")
+        val codigo = readlnOrNull()?.toIntOrNull()?:0
+        print("Introduce el nombre del producto: \n")
+        val nombre = readlnOrNull().toString()?:"-"
+        print("Introduce el precio del producto: \n")
+        val precio = readlnOrNull()?.toFloatOrNull()?:0.0f
+        print("Introduce el stock del producto: \n")
+        val stock = readlnOrNull()?.toIntOrNull()?:0
+        inventario[codigo] = Producto(nombre, precio, stock)
+    }
+}
+
+fun imprimirinventario(inventario: MutableMap<Int, Producto>) = inventario
+
+fun consultar(inventario: MutableMap<Int, Producto>){
+    print("¿Que producto quieres consultar? ")
+    val producto = readlnOrNull()?.toIntOrNull()
+    print("${inventario[producto]}\n")
+}
+
+fun stock0(inventario: MutableMap<Int, Producto>){
+    print("Cantidad de productos con stock 0: ${inventario.filter { it.value.stock==0 }.count()}")
+
+}
+
+fun ejercicio15_colecciones(){
+    //15. Se desea almacenar los datos de n alumnos (n se ingresa por teclado). Definir un MutableMap cuya clave sea el número de documento del alumno.
+    //Como valor almacenar una lista con componentes de la clase Materia donde almacenamos nombre de materia y su nota.
+    //Crear las siguientes funciones:
+    //1) Almacenar los alumnos (de cada alumno solicitar su dni y los nombres de las materias y sus notas)
+    //2) Listado de todos los alumnos con sus notas
+    //3) Consulta de un alumno por su dni, mostrar las materias que cursa y sus notas.
+    val diccionario = mutableMapOf<Int,materia>()
+    almacenar(diccionario)
+    imprimiralumnos(diccionario)
+    alumno(diccionario)
+}
+data class materia(
+    val materia : String,
+    val nota: Float
+)
+
+fun almacenar(diccionario: MutableMap<Int, materia>){
+    print("Cantidad de alumnos a almacenar: ")
+    val cantidad = readlnOrNull()?.toIntOrNull()?:0
+    for (x in 1..cantidad){
+        println("Alumno $x")
+        println("Número de documento: ")
+        val documento = readlnOrNull()?.toIntOrNull()?:0
+        println("Asingatura: ")
+        val asignatura = readlnOrNull().toString()
+        println("Nota: ")
+        val nota = readlnOrNull()?.toFloatOrNull()?:0f
+        diccionario[documento] = materia(asignatura,nota)
+    }
+}
+
+fun imprimiralumnos(diccionario: MutableMap<Int, materia>) = diccionario
+fun alumno(diccionario: MutableMap<Int, materia>){
+    print("Número de documento: ")
+    val documento = readlnOrNull()?.toIntOrNull()?:0
+    println(diccionario[documento])
+}
 
