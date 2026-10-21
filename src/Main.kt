@@ -7,8 +7,14 @@ import estructura_colecciones.ejercicio2_colecciones
 import estructura_colecciones.ejercicio3_colecciones
 import estructura_colecciones.ejercicio4_colecciones
 import estructura_colecciones.ejercicio5_colecciones
+import estructura_colecciones.ejercicio6_colecciones
 import funciones.ejercicio1_funciones
 import funciones.ejercicio2_funciones
+import funciones.ejercicio3_funciones
+import funciones.ejercicio4_funciones
+import funciones.ejercicio5_funciones
+import funciones.ejercicio6_funciones
+import funciones.ejercicio7_funciones
 
 fun main() {
     //triangulos
@@ -35,6 +41,11 @@ fun main() {
     //ejercicio14_colecciones()
     //ejercicio15_colecciones()
     //ejercicio1_funciones()
-    ejercicio2_funciones()
+    //ejercicio2_funciones()
+    //ejercicio3_funciones()
+    //ejercicio4_funciones()
+    //ejercicio5_funciones()
+    //ejercicio6_funciones()
+    ejercicio7_funciones()
 }
 
