@@ -15,6 +15,7 @@ import funciones.ejercicio4_funciones
 import funciones.ejercicio5_funciones
 import funciones.ejercicio6_funciones
 import funciones.ejercicio7_funciones
+import poo.crear_cuenta
 
 fun main() {
     //triangulos
@@ -46,6 +47,7 @@ fun main() {
     //ejercicio4_funciones()
     //ejercicio5_funciones()
     //ejercicio6_funciones()
-    ejercicio7_funciones()
+    //ejercicio7_funciones()
+    crear_cuenta("Pablo", 1000f)
 }
 
