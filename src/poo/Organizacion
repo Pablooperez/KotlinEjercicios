@@ -1,0 +1,4 @@
+1. Archivo solo para estructuras (Clases). (Sin validar)
+2. Archivo para los diferentes métodos.
+ 2.1 : Validar los datos que necesitan las Clases (Propiedades y métodos)
+3. Archivo Main. Ejecución de los problemas.
