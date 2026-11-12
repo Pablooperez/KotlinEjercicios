@@ -1,0 +1,230 @@
+Programming Kotlin.
+Unidad 4 - POO - Programación Orientada Objetos
+
+Notas:
+a) Utilice todas las ventajas de la programación en Kotlin
+b) Para cada uno de los ejercicios realice una función que permita la
+ejecución y demostración de cada ejercicios
+c) optimice el algoritmo y la escritura de código.
+/1. Crear una clase Persona donde sus atributos son (Nombre y edad)"),
+crear el método imprimir, donde se muestre la
+clasificación de la persona según su edad. menor (<18años),joven (18
+a 29 ), adulto en cualquier otro rango
+/2. Crear un programa que se solicite los 3 lados de un triángulo y
+tenga los métodos: ladoMayor y esEquilatero.
+Realice tres constructores para esta clase. Indique siempre que
+constructor se está ejecutando:
+1 constructor principal se le pasa los valores de cada lado (lado1,
+lado y lado3)
+2 constructor no se le pasa ningún valor y solicita el valor de
+(lado1 y lado2=, lado 3 es el valor de lado1
+3 constructor se le pase el valor de un solo lado (lado1) e iguale
+los restantes
+/3. Crear un programa donde se le pase el nombre de un alumno y un
+listado de sus 5 notas y tiene como métodos:
+notaPromedio: Calcular el promedio de sus notas
+detalleNotas: imprima la cantidad de asignatura por rango de nota.
+Si la nota es >=7 mostrar "Promocionado" y la cantidad".
+Si el promedio es >=5 y <7 mostrar "Regular" y la cantidad.
+Si el promedio es <5 mostrar "Reprobado" y la cantidad.
+/4. Dato un punto (X,Y) decir la ubicación en el cuadrante al que
+pertenece, llamando al método imprimir
+1 constructor principal se le pasa los valores del punto(X,Y)
+2 constructor secundario no se le pasa ningún valor y solicita el
+valor X y Y
+3 constructor tercero se le pase el valor X ( el punto siempre debe
+estar sobre el eje Y)
+/5. Dado los datos de un empleado: nombre, apellidos, edad ,teléfono
+,email y salario realice:
+Tiene los siguientes métodos:
+- método: imprimirEmpleado:
+La información debe imprimirse con las siguientes características
+* el nombre y apellidos siempre mayúsculas
+* el salario con el formato " Salario: valor_salario € "
+* el teléfono con el formato: (+34)xxx-xxx-xxx
+* el email con el prefijo Gmail(para cuentas de gmail), Hotmail (para
+cuentas de hotmail) Yahoo(para cuentas de yahoo)
+ y Otros (para cualquier otra cuenta)
+ej.
+Gmail: cuanta@gmail.com
+Yahoo: cuanta@yahoo.com
+Hotamil: cuenta@hotmail.com
+Otro: cuenta@tame.com
+ Debe mostrarse la siguiente plantilla cuando se imprima los datos
+de un empleado:
+ Datos del Empleado.
+ Nombre y Apellidos:
+ Edad:
+ Teléfono:
+ Email:
+ Salario:
+ Declara Impuesto:
+- método: pagarImpuesto
+ * Si el salario es menor de 1500 "No Paga Impuesto"
+ * en el rango (1501 hasta 2000) paga el 16% del salario
+ * en el rango superior a 2001 pagara el 35% del salario
+6. Se tiene 3 dados de color Rojo, Amarillo y Negro. Cada dado tiene
+una numeración del 1 al 6.
+Realice el juego, que se tire los 3 dados y si el valor de los 3 dados
+es iguales, el cliente ha Ganado, en caso
+contrario Ha perdido.
+Solicite al cliente los valores para inicializar cada dado, en caso de
+ser errónea, se inicializará en valor 1
+Muestre el valor de los dados antes de tirar, y luego muestre el
+resultado de la tirada.
+7. Escriba un programa que muestre el resultado de la operación entre
+dos números. Las operaciones permitidas son
+(suma, resta, multiplicación y división ) o cualquier de sus
+operadores correspondiente.
+Se tiene una lista de valores de cada operación con su operador.
+a) Muestre de la lista anterior, cada valor, su operador y la posición
+que ocupa dentro de la lista
+b) Haga otra lista igual a la anterior y modifique la salida del valor
+de la operación .
+Ej. con el valor Suma, imprima "operacion suma"
+Muestre de la lista , cada valor, su operador y la posicion que ocupa
+dentro de la lista
+8. Realice un programa para guardar la información de estudiantes.
+De cada estudiante, tenemos la siguiente información : nombre, edad,
+curso matriculado ( 1GS, 1GM,"GS,"GM) y por cada
+asignatura sus notas.
+Las asignaturas son ("PM","LM","ENT","BD","AD","DI")
+Defina los siguientes métodos :
+- ImprimirDatos (imprima los datos en el siguiente formato)
+ Nombre y Apellidos: (en mayúsculas)
+ Edad:
+ Curso Matriculado: (en mayúsculas)
+ Listado de Notas
+ Asignatura - Nota
+ .............
+ Asignatura - Nota
+ Nota Promedio:
+- NotaPromedio (imprima la nota promedio de un alumno)
+9. Se tiene un dado inicializado con 5 elementos y los métodos generar
+(donde genera aleatoriamente 5 elementos),
+mayor(Muestra el número mayor de la lista), Imprimir (muestra los
+elementos de la lista).
+Haga una función donde se pueda verificar el enunciado anterior.
+----------------------------------------------------------------------
+----------
+ HERENCIA: OPEN, ABSTRACT, SEALED, INTERFACE
+----------------------------------------------------------------------
+----------
+10. Resuelva el siguiente enunciado y programe una función con un
+ejemplo de cada caso:
+De una persona conocemos su nombre y edad. Si es empleado tiene un
+salario y debe ser mayor de 16 años.
+En caso que sea estudiante, debe ser mayor de 16 años y conocemos su
+grado de estudio.
+11. Realice las programación de una calculadora básica con las
+operaciones : Suma(+), Resta(-), Multiplicar(*),
+División(/). una calculadora científica con las operaciones
+Cuadrado(x2) y Raíz Cuadra (Raiz).
+El programa solicita dos números y la operación a realizar.
+12. Defina una clase "Muebles" con las propiedades en el constructor
+descripción, material y precio.
+Además tiene las propiedades color y uso.
+Los métodos son: cambiarColor, espacificacioneUso, limpiar,
+muestraDetalles(Donde se muestra los valores de las propiedades
+principales)
+a) Crear la clase "Mesa" que hereda de la clase anterior e implemente
+algún método
+b) Realice una función para crear objetos de la clase mesa e
+implementar algún método declarado en la misma
+13.Se tiene la siguiente interface:
+ interface Figura {
+ fun calcularSuperficie(): Int
+ fun calcularPerimetro(): Int
+ fun tituloResultado() = "Datos de la figura"
+ }
+Definir dos clases que representen un Cuadrado y un Rectángulo.
+Implementar la interface
+Figura en ambas clases.
+14. Realice la interface "Vehiculo" con las siguientes propiedades y
+métodos:
+Propiedades:
+nobastidor, tipo (su valores serán: Coche, Avión, Tren, Barco,
+Caravana), marca, modelo, color,fecha creación, precio y
+propietario.
+métodos:
+cambiarColor, modificarPrecio, calcularImpuesto, ,cambiarPropietario
+e imprimirDatos
+(Este último método está desarrollado en la interface, donde muestra
+toda las propiedades del vehículo)
+El método cambiarColor y modificarPrecio, se le pasa por parámetro,
+el nuevo valor a cambiar
+Siempre que se imprima el valor de la propiedad "marca", se quiere que
+se imprima dentro de () el valor de la
+propiedad tipo. Ej. (COCHE) Seat
+a)Realice una clase Coche, que hereda de la interface y además tiene
+las propiedades número de asientos y
+velocidad máxima
+b) Defina una clase Caravana que va a heredar de la clase Coche , y
+tiene las propiedades:
+altura, peso, longitud, descripción, accesorios y redefina el método
+de imprimirDatos, donde muestre la información de las nuevas
+propiedades de esta clase
+c) Realice una función y declare una instancia de las clases
+anteriores y utilice alguno de sus métodos
+ Resolución de Problemas
+1. Realice un programa para realizar un pedido de pizza de Pizza Hurt,
+tenga presente la siguiente información
+- Mensaje de bienvenida a Pizza Hurt y el usuario seleccione la
+cantidad de piezas "para llevar"
+- Para realizar el pedido de cada pizza, tener un menú auxiliar para
+ayudar al usuario en la selección.
+- Se dispone de 5 pizzas pre-elaboradas, 1 pizza elaborada por mitades
+y 1 pizza que es creada al gusto del usuario
+1- Americana
+(Salsa de tomate, mozzarella, extra de pepperoni, bacon y cebolla
+roja)
+2- Barbacoa
+(Salsa barbacoa, carne, cebolla roja y bacon, extra de queso)")
+3- Carbonara
+(Salsa carbonara, jamón de York, champiñones , cebolla roja, extra de
+queso)
+4- Hawaina
+(Doble jamón, doble de piña, extra de mozzarella, Salsa carbonara,
+extra de queso)
+5- Meat Lovers
+(Salsa de tomate, carne, pepperoni, jamón de York, bacon y
+mozzarella")
+6- Por Mitades
+(2 mitades, cada una de una piza pre-elaborada)
+7- Crea Tu Propia Pizza ( Al Gusto !!! )
+- Crear tu propia Pizza: seleccionar una de las ya elaboradas,
+añadiendo ingredientes a gusto del usuario
+Tenga presente que cada ingrediente, según su precio, va incrementando
+el precio de la pizza pre-elaborada
+- Permitir al cliente, elegir el tipo de masa para cada pizza.
+Tipo de masa:
+"Masa Tradicional", "Masa Fina", "Masa Rolling", "Masa Rolling con
+queso"
+- Seleccionar el tamaño de cada pizza:
+"pequeña", "mediana" o "familiar"
+- El cliente pueda seleccionar el tipo de pedido:
+"local", "A domicilio" o "Recoger"
+- Las promociones, están vinculada al tipo de pedido. En caso de
+haber alguna promoción, aplicar la promoción al
+final del pedido.
+- Antes de hacer el finalizar el pedido, mostrar un resumen al
+cliente, para que confirme el pedido realizado.
+ En caso que desee modificar(Adicionar/Eliminar/Modificar) pueda
+realizarlo.
+Nota: El cliente en cualquier momento, puede salir del proceso de
+realizar el pedido
+2.Realice un programa para realizar la gestión de una Hamburguesería,
+permitiendo las siguientes acciones:
+a) Introducir nuevos productos de hamburguesa, donde se conoce su
+identificación única, el nombre del producto,
+tipo de producto (carne, pollo o vegana)precio, precio en combo y los
+ingredientes originales que la componen .
+b) Listado de los productos, con toda su información
+c) Permitir hacer un pedido, y la posibilidad de personalizar cada
+producto, permitiendo:
+ 1) adicionar o eliminar ingredientes
+ 2) observaciones o nota de algún ingrediente o del producto
+ 3) si el producto no es un combo, permitir hacerlo
+ 4) si el producto es un combo, permitirlo hacerlo grande por el
+incremento de un valor X
+ 5) Conocer, el precio total del pedido y la dirección del envió

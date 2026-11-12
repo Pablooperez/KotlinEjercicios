@@ -149,6 +149,18 @@ class Termostato (val modelo :  String, temperaturaInicial : Double = 21.0) {
 
 }
 
+open class Trabajador(val nombre : String) {
+    open fun calcularSueldo() : Double {
+        return 1000.0
+    }
+}
+
+class Gerente(nombre : String ,val bonus : Double) : Trabajador(nombre) {
+    override fun calcularSueldo() : Double{
+        return super.calcularSueldo() + bonus
+    }
+}
+
 
 
 
