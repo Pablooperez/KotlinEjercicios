@@ -105,7 +105,7 @@ class NotasAlumno(val nombre : String, nota1 : Float, nota2 : Float, nota3 :  Fl
     }
 
     fun detalleNotas(){
-        
+
         var promocionado = 0
         var regular = 0
         var reprobado = 0
@@ -143,7 +143,7 @@ class Cuadrante(){
 
 }
 
-class Empleadoo(){
+class Empleadoo(v_nombre : String, v_apellidos : String, v_edad : Int, v_telefono : String, v_email : String, v_salario : Float){
 
     ///5. Dado los datos de un empleado: nombre, apellidos, edad ,teléfono
     //,email y salario realice:
@@ -174,6 +174,26 @@ class Empleadoo(){
     // * Si el salario es menor de 1500 "No Paga Impuesto"
     // * en el rango (1501 hasta 2000) paga el 16% del salario
     // * en el rango superior a 2001 pagara el 35% del salario
+
+    var nombre = v_nombre
+    var apellidos = v_apellidos
+    var edad = v_edad
+    var telefono = v_telefono
+    var email = v_email
+    var salario = v_salario
+
+    init {
+        nombre.uppercase()
+        apellidos.uppercase()
+        edad >= 14
+        telefono = "(+34) $telefono"
+        salario >= 0f
+    }
+
+    fun imprimirEmpleado(){
+        var empleado : MutableMap<String>
+    }
+
 
 
 
