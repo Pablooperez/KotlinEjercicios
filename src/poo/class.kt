@@ -80,7 +80,7 @@ class Lados( lado1_entrada : Float? = null,  lado2_entrada : Float? = null, lado
 
 }
 
-class NotasAlumno(nombre : String, ){
+class NotasAlumno(val nombre : String, nota1 : Float, nota2 : Float, nota3 :  Float, nota4 : Float, nota5 : Float){
 
     ///3. Crear un programa donde se le pase el nombre de un alumno y un
     //listado de sus 5 notas y tiene como métodos:
@@ -90,7 +90,44 @@ class NotasAlumno(nombre : String, ){
     //Si el promedio es >=5 y <7 mostrar "Regular" y la cantidad.
     //Si el promedio es <5 mostrar "Reprobado" y la cantidad.
 
+    var listado : MutableList<Float> = mutableListOf()
 
+    init {
+         if (nota1 >= 0f && nota2 >= 0f && nota3 >= 0f && nota4 >= 0f && nota5 >= 0f) {
+             listado.addAll(listOf(nota1, nota2, nota3, nota4, nota5))
+         }else{
+             print("Alguna de las notas no están en el formato correcto")
+         }
+    }
+
+    fun notaPromedio(){
+        print("La nota promedio es: ${listado.average()}")
+    }
+
+    fun detalleNotas(){
+        
+        var promocionado = 0
+        var regular = 0
+        var reprobado = 0
+
+        if (listado.isEmpty()){
+            println("No hay notas registradas")
+        } else {
+            for (nota in listado) {
+                when {
+                    nota >= 7f -> promocionado++
+                    nota >= 5f && nota < 7f -> regular++
+                    else -> reprobado++
+                }
+            }
+        }
+
+        println("Detalle de asignaturas de $nombre:")
+        println("Promocionado: $promocionado")
+        println("Regular: $regular")
+        println("Reprobado: $reprobado")
+
+    }
 }
 
 class Cuadrante(){
