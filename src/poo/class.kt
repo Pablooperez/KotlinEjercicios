@@ -53,8 +53,7 @@ class Lados( lado1_entrada : Float? = null,  lado2_entrada : Float? = null, lado
                     print("Dime el valor del lado $i: ")
                     lista.add( (readln().toFloatOrNull() ?: 0f).coerceAtLeast(0.1f))
                 }
-                lista.add(lista[2])
-
+                lista.add(lista[1])
             }
 
             lado1_entrada != null && lado2_entrada == null && lado3_entrada == null -> {
@@ -64,11 +63,8 @@ class Lados( lado1_entrada : Float? = null,  lado2_entrada : Float? = null, lado
                 lista.add(lado1)
                 lista.add(lado2)
                 lista.add(lado3)
-
             }
-
         }
-
     }
 
     fun ladoMayor() = print("El lado mayor es lado {${lista.indexOf(lista.max())}} : {${lista.max()}}")
@@ -130,15 +126,49 @@ class NotasAlumno(val nombre : String, nota1 : Float, nota2 : Float, nota3 :  Fl
     }
 }
 
-class Cuadrante(){
+class Cuadrante(v_x : Float? = null, v_y : Float? = null ){
 
-    ///4. Dato un punto (X,Y) decir la ubicación en el cuadrante al que
+    ///4. Dado un punto (X,Y) decir la ubicación en el cuadrante al que
     //pertenece, llamando al método imprimir
     //1 constructor principal se le pasa los valores del punto(X,Y)
     //2 constructor secundario no se le pasa ningún valor y solicita el
     //valor X y Y
     //3 constructor tercero se le pase el valor X ( el punto siempre debe
     //estar sobre el eje Y)
+
+    var x = v_x
+    var y = v_y
+
+    fun imprimir(){
+        val ubicacion = when {
+            x != null && y != null -> {
+                x == 0f && y == 0f -> print("Pertenece al origen (0,0))"
+                x > 0f && y > 0f -> "Pertenece al Primer Cuadrante"
+                x < 0f && y > 0f -> "Pertenece al Segundo Cuadrante"
+                x < 0f && y != null && y < 0f -> "Pertenece al Tercer Cuadrante"
+                x > 0f && y != null && y < 0f -> "Pertenece al Cuarto Cuadrante"
+            }
+            x == null && y == null -> {
+                print("Introduce el valor de X: ")
+                x = readlnOrNull()?.toFloatOrNull()?:0f
+                print("Introduce el valor de Y: ")
+                y = readlnOrNull()?.toFloatOrNull()?:0f
+                when {
+                    x != null && x == 0f && y != null && y == 0f -> "Pertenece al origen (0,0)"
+                    x != null && x > 0f && y != null && y > 0f -> "Pertenece al Primer Cuadrante"
+                    x != null && x < 0f && y != null && y > 0f -> "Pertenece al Segundo Cuadrante"
+                    x != null && x < 0f && y != null && y < 0f -> "Pertenece al Tercer Cuadrante"
+                    x != null && x > 0f && y != null && y < 0f -> "Pertenece al Cuarto Cuadrante"
+                }
+            }
+        }
+    }
+
+
+
+
+
+
 
 
 }
@@ -186,12 +216,13 @@ class Empleadoo(v_nombre : String, v_apellidos : String, v_edad : Int, v_telefon
         nombre.uppercase()
         apellidos.uppercase()
         edad >= 14
-        telefono = "(+34) $telefono"
+        telefono = "(+34)$telefono"
         salario >= 0f
     }
 
     fun imprimirEmpleado(){
-        var empleado : MutableMap<String>
+
+
     }
 
 

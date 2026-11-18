@@ -60,4 +60,49 @@ PARÁMETROS DE SALIDA:
 --------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------
+POO -> CLASES - OBJETOS - HERENCIA
+
+Dentro de cada clase tenemos: propiedades y métodos. Por defecto todas las clases son finales (que no se pueden heredar).
+Para cada objeto tengo el método constructor.
+Kotlin nos permite definir las propiedades dentro del cuerpo.
+Podemos aplicar los métodos set y get. Esa propiedad no puede estar definidia en el constructor, sino dentro de la clase.
+
+- Data class, es una clase que solamente utiliza las propiedades y ciertos métodos vienen por defecto. Permite personalizarlo o recodificarlo.
+    Tambien podemos crear métodos propios, pero si hago eso ya no estoy en un data class, sino en un class por defecto. (No usarlo).
+- Enum class: puedes definir las propiedades; el valor, y ese parametro del valor hace intensidad a una cualidad/atributo.
+- Tenemos dos formas de declarar objetos:
+    - De un solo uso: lo defino y se crea solamente cuando lo mando hacer.
+    - Generar objetos: este lo usamos dentro de una clase, con un método de declaración, en vez de usar el constructor.
+- Herencia: La herencia te permite crear un mapa jerárquico.
+    - ¿Condiciones para poder heredar? -> Open class (Se puede especificar los métodos que se heredan, ya sean para sobreescibirlo (personalzarlo) o para su uso).
+    - Abstractas: Patrones (Se definen las propiedades y métodos, no se puede sobreescribir un método heredado)
+    - Interfaces:
+
+- Kotlin Aplicaciones: Kotlin enfocado al desarrollo de aplicaciones.
+    Utilizamos: Kotlin nativo + Android Studio.
+
+PROYECTO - > Involucra muchos archivos:
+                - La función del Main.kt es el flujo del programa. Nada más.
+                - Las estructuras no persistentes van en un archivo: Clasificadas: -> Clases.kt (Diagrama de clases que resuelve el problema).
+                                                                                   -> TDA.
+                - Estructuras de datos persistentes: -> Estructura de la BBDD. -> Maestra / Temporal / Histórico.
+                - Gestión: -> Algoritmo (Análisis - Diseño - Implementación).
+
+HERENCIA : -> Encapsulamiento: La clase padre expone solo lo necesario.
+           -> Características:
+                - Por defecto las clases son finales: No se pueden heredar.
+                - Herencia simple: Una clase solamente puede heredar de una sola clase.
+                - Aquellos métodos que yo quiera permitir que las clases o subclases puedan redefinirlo, tenemos que indicar Override.
+                - Para utilizar el método del padre, tenemos que añadir el prefijo Super.
+                - El compilador infiere en los tipos específicos después de comprobaciones, utilizamos is.
+
+           -> Mapa de jerarquía:
+                -> Unit: -> open class: Heredable. Pero no está instanciada en un principio para que sea heredable, cuando pensamos que lo necesitamos la abrimos.
+                         -> abstract class: Solamente se puede heredar de una abstracta. Solamente definimos el método, pero no lo programamos.
+                         -> interface class: Una clase puede heredar de varias interfaces.
+                         -> sealed class:
+
+           -> ¿Necesitas heredar? : SI -> Open class : Clase base concreta que otras puedan extender. Sus métodos son final salvo que se marquen open.
+                                       -> Interface class : Define un contracto. Una clase puede implementar varias interfaces y heredar solo una clase.
+                                       -> Abstract class : Clase incompleta que no se puede instanciar. Sirve como plantilla para subclases.
 
