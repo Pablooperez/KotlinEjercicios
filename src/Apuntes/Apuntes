@@ -106,3 +106,20 @@ HERENCIA : -> Encapsulamiento: La clase padre expone solo lo necesario.
                                        -> Interface class : Define un contracto. Una clase puede implementar varias interfaces y heredar solo una clase.
                                        -> Abstract class : Clase incompleta que no se puede instanciar. Sirve como plantilla para subclases.
 
+TDA : -> Tipos de Datos Abstractos : Son modelos matemáticos abstractos que definen un conjunto de datos y las operaciones que se pueden realizar sobre ellos.
+                                     Importante es el Qué es lo que voy a hacer con él, no el cómo (Esto lo hace el Lenguaje de Programación)
+                                     El TDA define una especificación clara de la interfaz.
+                                     Características : -> Abstracción : Oculta los detalles del cómo se hace.
+                                                       -> Independencia de implementación : Puede tener múltiples implementaciones sin afectar su uso.
+                                                       -> Operaciones bien definidas : Tiene un conjunto específico de operaciones con comportamientos predecibles.
+                                                       -> Invariante de datos : Mantiene determinadas propiedades siempre que se cumplan unas condiciones.
+
+                                     Tipos : -> Lineales : Pilas - Colas - Listas
+                                             -> Jerárquicos : Árboles.
+                                             -> Red : Grafos.
+                                             -> Asociativos : Diccionarios - Conjuntos.
+                                             -> Prioridad : Colas de Prioridad.
+
+
+
+
