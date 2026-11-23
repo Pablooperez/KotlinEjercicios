@@ -1,0 +1,76 @@
+
+BASE DE DATOS -> RELACIONALES : -> CENTRALIZADO
+                                -> DISTRIBUIDAS
+
+              -> NO RELACIONALES :
+
+              - BASE DE DATOS RELACIONALES : -> SQL : -> DDL : Diseño de las estructuras (Implementación, modificación), (Drop).
+                     MODELO E/R                       -> DML : Tratamiento de la información. (A todos los registros o condicional),(Update, insert, delete, truncate).
+                                                      -> DQL : Consulta de la información.
+                                                      -> DCL : Tratamiento de usuarios, seguridad.
+                                                      -> TCL : Tratamiento de transacciones.
+
+                     -> DDL : - Tablas.
+                              - Campos.
+                              - PK. -> Relación uno / uno - Relación uno / muchos - Relación muchos / muchos.
+                              - FK.
+                              - Index.
+                              - Sentencias : Drop table / database
+                                             Create table / database
+                              - Funciones de distintos usos : Seguridad.
+
+                     -> DML : - Insert into <table> (valor,...,...,...) -> Aspectos a tener en cuenta : - Inserción simple : Todos los valores los conozco.
+                                    values (...,...,...,...);                                           - Inserción indirecta : Información que no se conoce y hay que buscarla. -> Select : Almacenado en variable, para hacer la inserción simple.
+                              - Update <table>
+                                 set campos = value1,
+                                     campos = value2;
+                                 condiciones : where;
+
+                              - Delete from <table>
+                                 condiciones
+
+                     -> DQL : - Consultas simple: Sobre tabla o multitabla, uso de condiciones.
+                              - Subconsultas: Sobre tabla o multitabla, uso de condiciones.
+                              - Ej: Select tabla.campos from <tablas>
+                                        Where (condiciones)
+                                        Group by (agrupar registros)
+                                        Having (filtro sobre grupos)
+                                        Ordenamiento (Limit)
+                                        Dentro de todas ellas : Funciones propias de MySql.
+                                                                Funciones definidas por el usuario (Rutinas).
+
+                              - Rutinas: - Funciones : Deterministas y no deterministas, ambas devuelven un valor.
+                                         - Procedimientos : Ejecución de código | a través de los parámetros puedo : - Out : Sacar información.
+                                                                                                                     - Inout : Entrar y salir un valor.
+                                         - Cursores : Implementar sobre varios registros (condición o no) todo el código.
+                                         - Disparadores : Automatizar cambios en la BD, bajo condiciones, sin supervisión humana.
+
+                     -> NUEVO : - Cómo debo guardar los datos de forma segura.
+                                - Cómo identificar las tablas y BD de una forma más segura.
+                                - Clasificar en nuestro modelo que BD (Centralizada o Distribuida).
+                                - Qué elegir -> Modelo SQL. - SQLite.
+                                             -> Modelo NoSQL. - Documents (MongoDB, Firebase).
+                                - Base de Datos Maestro / Master (Gestionar).
+                                - Base de Datos Histórico (Consultar).
+                                - Base de Datos Temporal (Local al usuario, relacionadas con las Master)
+
+PROYECTOS :
+Tenemos Intellij y Datagrid. Bases de datos. En intelli hacemos un proyecto con:
+                                                                             - Main.kt : para el flujo del programa.
+
+                                                                             - Estructuras de datos : archivo varios, Estructuras internas
+                                                                             del uso del programa cuyo objetivo es manipular un dato no persistentes.
+                                                                             Implementación del diagrama de clases.
+
+                                                                             - Algoritmos : Algoritmo base y algoritmo general. Análisis, diseño e implementación vinculado al
+                                                                             flujo del programa.
+
+                                                                             - Interfaces : Flujo de la información:
+                                                                                            - Versión para movil.
+                                                                                            - Versión web / escritorio.
+
+                                                                             - Base de Datos : - Modelo E/R Ampliado.
+                                                                                               - DDL.
+                                                                                               - Identificar y características para la BBDD Maestro - Histórico - Temporal.
+
+                                                                             - Comunicación directa entre Intellij y Datagrid.
