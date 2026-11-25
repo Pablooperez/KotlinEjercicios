@@ -76,7 +76,7 @@ class Lados( lado1_entrada : Float? = null,  lado2_entrada : Float? = null, lado
 
 }
 
-class NotasAlumno(val nombre : String, nota1 : Float, nota2 : Float, nota3 :  Float, nota4 : Float, nota5 : Float){
+open class NotasAlumno(val nombre : String, val lista : MutableList<Float>){
 
     ///3. Crear un programa donde se le pase el nombre de un alumno y un
     //listado de sus 5 notas y tiene como métodos:
@@ -86,42 +86,34 @@ class NotasAlumno(val nombre : String, nota1 : Float, nota2 : Float, nota3 :  Fl
     //Si el promedio es >=5 y <7 mostrar "Regular" y la cantidad.
     //Si el promedio es <5 mostrar "Reprobado" y la cantidad.
 
-    var listado : MutableList<Float> = mutableListOf()
-
-    init {
-         if (nota1 >= 0f && nota2 >= 0f && nota3 >= 0f && nota4 >= 0f && nota5 >= 0f) {
-             listado.addAll(listOf(nota1, nota2, nota3, nota4, nota5))
-         }else{
-             print("Alguna de las notas no están en el formato correcto")
-         }
-    }
-
     fun notaPromedio(){
-        print("La nota promedio es: ${listado.average()}")
+        print("La nota promedio es: ${lista.average()}")
     }
 
     fun detalleNotas(){
 
-        var promocionado = 0
-        var regular = 0
-        var reprobado = 0
+        var diccionario = mutableMapOf<String, MutableList<Float>>(
+            "Promocionado" to mutableListOf(),
+            "Regular" to mutableListOf(),
+            "Reprobado" to mutableListOf()
+        )
 
-        if (listado.isEmpty()){
+        if (lista.isEmpty()){
             println("No hay notas registradas")
         } else {
-            for (nota in listado) {
+            for (nota in lista) {
                 when {
-                    nota >= 7f -> promocionado++
-                    nota >= 5f && nota < 7f -> regular++
-                    else -> reprobado++
+                    nota >= 7f -> diccionario["Promocionado"]?.add(nota)
+                    nota >= 5f && nota < 7f -> diccionario["Regular"]?.add(nota)
+                    else -> diccionario["Reprobado"]?.add(nota)
                 }
             }
         }
 
         println("Detalle de asignaturas de $nombre:")
-        println("Promocionado: $promocionado")
-        println("Regular: $regular")
-        println("Reprobado: $reprobado")
+        println("Promocionado: ${diccionario["Promocionado"]?.size}: ${diccionario["Promocionado"]}")
+        println("Regular: ${diccionario["Regular"]?.size}: ${diccionario["Regular"]}")
+        println("Reprobado: ${diccionario["Reprobado"]?.size}: ${diccionario["Reprobado"]}")
 
     }
 }
@@ -140,13 +132,17 @@ class Cuadrante(v_x : Float? = null, v_y : Float? = null ){
     var y = v_y
 
     fun imprimir(){
-        val ubicacion = when {
+        when {
             x != null && y != null -> {
-                x == 0f && y == 0f -> print("Pertenece al origen (0,0))"
-                x > 0f && y > 0f -> "Pertenece al Primer Cuadrante"
-                x < 0f && y > 0f -> "Pertenece al Segundo Cuadrante"
-                x < 0f && y != null && y < 0f -> "Pertenece al Tercer Cuadrante"
-                x > 0f && y != null && y < 0f -> "Pertenece al Cuarto Cuadrante"
+                when{
+                    x == 0f && y == 0f -> print("Punto: [$x,$y], Pertenece al origen (0,0))")
+                    x == 0f -> print("Punto: [$x,$y], Punto sobre el eje X")
+                    y == 0f -> print("Punto: [$x,$y], Punto sobre el eje Y")
+                    x > 0f && y > 0f -> print("Punto: [$x,$y], Pertenece al Primer Cuadrante")
+                    x < 0f && y > 0f -> print("Pertenece al Segundo Cuadrante")
+                    x < 0f && y != null && y < 0f -> print("Pertenece al Tercer Cuadrante")
+                    x > 0f && y != null && y < 0f -> print("Pertenece al Cuarto Cuadrante")
+                }
             }
             x == null && y == null -> {
                 print("Introduce el valor de X: ")
@@ -154,13 +150,16 @@ class Cuadrante(v_x : Float? = null, v_y : Float? = null ){
                 print("Introduce el valor de Y: ")
                 y = readlnOrNull()?.toFloatOrNull()?:0f
                 when {
-                    x != null && x == 0f && y != null && y == 0f -> "Pertenece al origen (0,0)"
-                    x != null && x > 0f && y != null && y > 0f -> "Pertenece al Primer Cuadrante"
-                    x != null && x < 0f && y != null && y > 0f -> "Pertenece al Segundo Cuadrante"
-                    x != null && x < 0f && y != null && y < 0f -> "Pertenece al Tercer Cuadrante"
-                    x != null && x > 0f && y != null && y < 0f -> "Pertenece al Cuarto Cuadrante"
+                    x != null && x == 0f && y != null && y == 0f -> print("Pertenece al origen (0,0)")
+                    x == 0f -> print("Punto sobre el eje X")
+                    y == 0f -> print("Punto sobre el eje Y")
+                    x != null && x > 0f && y != null && y > 0f -> print("Pertenece al Primer Cuadrante")
+                    x != null && x < 0f && y != null && y > 0f -> print("Pertenece al Segundo Cuadrante")
+                    x != null && x < 0f && y != null && y < 0f -> print("Pertenece al Tercer Cuadrante")
+                    x != null && x > 0f && y != null && y < 0f -> print("Pertenece al Cuarto Cuadrante")
                 }
             }
+            x != null && y == null -> print("Punto sobre el eje Y")
         }
     }
 

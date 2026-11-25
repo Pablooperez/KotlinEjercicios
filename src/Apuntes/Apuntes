@@ -104,7 +104,12 @@ HERENCIA : -> Encapsulamiento: La clase padre expone solo lo necesario.
 
            -> ¿Necesitas heredar? : SI -> Open class : Clase base concreta que otras puedan extender. Sus métodos son final salvo que se marquen open.
                                        -> Interface class : Define un contracto. Una clase puede implementar varias interfaces y heredar solo una clase.
-                                       -> Abstract class : Clase incompleta que no se puede instanciar. Sirve como plantilla para subclases.
+                                            Muy parecidas a las clases abstractas. Permiten hacen herencia múltiple,
+                                       -> Abstract class : Se utiliza a conciencia para tener un modelo de herencia. Defino qué se va a hacer. En las hijas el cómo se hace.
+                                            El constructor se aplica directamente en las clases que van a heredar de ella.
+                                            Clase incompleta que no se puede instanciar. Sirve como plantilla para subclases.
+
+           ->
 
 TDA : -> Tipos de Datos Abstractos : Son modelos matemáticos abstractos que definen un conjunto de datos y las operaciones que se pueden realizar sobre ellos.
                                      Importante es el Qué es lo que voy a hacer con él, no el cómo (Esto lo hace el Lenguaje de Programación)
